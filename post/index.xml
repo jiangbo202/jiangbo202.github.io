@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Bojiang 的博客</title>
+    <link>https://jiangbo202.github.io/post/</link>
+    <description>Recent content in Posts on Bojiang 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Aug 2022 15:52:41 +0800</lastBuildDate><atom:link href="https://jiangbo202.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo博客(github Pages)搭建</title>
+      <link>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sat, 27 Aug 2022 15:52:41 +0800</pubDate>
+      
+      <guid>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</guid>
+      <description>hugo博客(github Pages)搭建 hugo安装 hugo安装 上传github 上传github github配置 </description>
+    </item>
+    
+  </channel>
+</rss>

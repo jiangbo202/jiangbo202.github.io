@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bojiang 的博客</title>
-    <link>https://jiangbo202.github.io/</link>
-    <description>Recent content on Bojiang 的博客</description>
+    <title>Pages on Bojiang 的博客</title>
+    <link>https://jiangbo202.github.io/page/</link>
+    <description>Recent content in Pages on Bojiang 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Aug 2022 15:52:41 +0800</lastBuildDate><atom:link href="https://jiangbo202.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>hugo博客(github Pages)搭建</title>
-      <link>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Sat, 27 Aug 2022 15:52:41 +0800</pubDate>
-      
-      <guid>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</guid>
-      <description>hugo博客(github Pages)搭建 hugo安装 hugo安装 上传github 上传github github配置 </description>
-    </item>
-    
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://jiangbo202.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>归档</title>
       <link>https://jiangbo202.github.io/archives/</link>
@@ -43,15 +34,6 @@
       <description>To use this feature, add links section to frontmatter.
 This page&amp;rsquo;s frontmatter:
 1 2 3 4 5 6 7 8 9 links: - title: GitHub description: GitHub is the world&amp;#39;s largest software development platform. website: https://github.com image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png - title: TypeScript description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. website: https://www.typescriptlang.org image: ts-logo-128.jpg image field accepts both local and external images.</description>
-    </item>
-    
-    <item>
-      <title>搜索</title>
-      <link>https://jiangbo202.github.io/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jiangbo202.github.io/search/</guid>
-      <description></description>
     </item>
     
   </channel>
