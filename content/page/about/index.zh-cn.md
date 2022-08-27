@@ -7,4 +7,4 @@ menu:
             icon: user
 ---
 
-一个人
+人

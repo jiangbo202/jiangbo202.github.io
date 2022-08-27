@@ -1,5 +1,5 @@
 ---
-title: "个人博客搭建"
+title: "个人博客搭建(基本)"
 date: 2022-08-27T15:52:41+08:00
 draft: false
 description: Github Pages, actions, hugo, hugo-theme-stack
@@ -7,10 +7,13 @@ image: personal_blog.jpg
 comments: true
 categories:
     - 个人博客
+tags:
+    - hugo
+    - hugo-theme-stack
+    - 博客
 ---
 
-
-# 个人博客搭建
+# 个人博客基础搭建
 >    基于: github Pages  
 >    主题: hugo-theme-stack  
 
@@ -27,12 +30,10 @@ macOS:
 ![结果](blog1.png)
 
 ### 设置主题
-进入myblog目录
-`cd myblog`
-初始化git:
-`git init`
-下载主题hugo-theme-stack
-`git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack`
+进入myblog目录 `cd myblog`  
+初始化git: `git init`  
+下载主题hugo-theme-stack  
+`git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack`  
 其他方式参考 [hugo-theme-stack文档](https://docs.stack.jimmycai.com/)
 > 其他主题到这里选: https://themes.gohugo.io/
 
@@ -50,9 +51,9 @@ macOS:
 ### 添加文件
 1. .gitignore
 `echo "public" > .gitignore`
-2. 创建目录.github/workflows和文件auto-deploy.yml(名字可改)
-使用vim或者vscode编辑
-*.github/workflows/auto-deploy.yml内容*
+2. 创建目录.github/workflows和文件auto-deploy.yml(名字可改) 使用vim或者vscode编辑  
+   
+**.github/workflows/auto-deploy.yml内容**
 ```yaml
 name: GitHub Page Deploy
 on:
@@ -95,10 +96,14 @@ git push -u origin main
 
 ## 结束
 浏览器打开 (github用户名).github.io 能看到空白的博客
+![如图](blog5.png)
+> 注意: 可能有时需要多等几分钟
 
 **代办**  
 
 - [ ] 写新文章 
 - [ ] 添加评论 
 - [ ]  访问量
+- [ ]  图床
+
 

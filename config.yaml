@@ -1,8 +1,9 @@
 baseurl: https://jiangbo202.github.io
-languageCode: en-us
+languageCode: zh-Hans
 theme: hugo-theme-stack
 paginate: 5
 title: Bojiang's blog
+hasCJKLanguage: true
 
 languages:
     en:
