@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Bojiang 的博客</title>
-    <link>https://jiangbo202.github.io/post/</link>
-    <description>Recent content in Posts on Bojiang 的博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 27 Aug 2022 15:52:41 +0800</lastBuildDate><atom:link href="https://jiangbo202.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>hugo博客(github Pages)搭建</title>
-      <link>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Sat, 27 Aug 2022 15:52:41 +0800</pubDate>
-      
-      <guid>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</guid>
-      <description>hugo博客(github Pages)搭建 hugo安装 hugo安装 上传github 上传github github配置 </description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Posts on Bojiang 的博客</title>
+        <link>https://jiangbo202.github.io/post/</link>
+        <description>Recent content in Posts on Bojiang 的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 27 Aug 2022 15:52:41 +0800</lastBuildDate><atom:link href="https://jiangbo202.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo博客(github Pages)搭建</title>
+        <link>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</link>
+        <pubDate>Sat, 27 Aug 2022 15:52:41 +0800</pubDate>
+        
+        <guid>https://jiangbo202.github.io/p/hugo%E5%8D%9A%E5%AE%A2github-pages%E6%90%AD%E5%BB%BA/</guid>
+        <description>&lt;h1 id=&#34;hugo博客github-pages搭建&#34;&gt;hugo博客(github Pages)搭建&lt;/h1&gt;
+&lt;h2 id=&#34;hugo安装&#34;&gt;hugo安装&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;hugo安装&lt;/li&gt;
+&lt;li&gt;上传github&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://jiangbo202.github.io/abc.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;上传github&#34;&gt;上传github&lt;/h2&gt;
+&lt;h2 id=&#34;github配置&#34;&gt;github配置&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
