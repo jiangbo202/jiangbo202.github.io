@@ -8,8 +8,8 @@ license:
 hidden: false
 comments: true
 categories:
+    - 技术
     - docker
-    - centos7
 tags:
     - docker
     - centos7
