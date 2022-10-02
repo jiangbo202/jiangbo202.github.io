@@ -1,5 +1,5 @@
 ---
-title: "Docker Centos7"
+title: "dockerd搭建centos7并通过ssh访问"
 description: 
 date: 2022-10-01T17:16:11+08:00
 image: docker_centos7/IMG_1870.jpg

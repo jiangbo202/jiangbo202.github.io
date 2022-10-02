@@ -28,7 +28,7 @@ DefaultContentLanguage: zh-cn
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
+hasCJKLanguage: true
 
 permalinks:
     post: /p/:slug/
@@ -42,8 +42,8 @@ params:
     favicon:
 
     footer:
-        since: 2020
-        customText:
+        since: 2022
+        customText: Powered by bojiang's spare time.
 
     dateFormat:
         published: Jan 02, 2006
@@ -61,6 +61,8 @@ params:
         math: false
         toc: true
         readingTime: true
+        moreMeta: true
+        wordCount: true
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
