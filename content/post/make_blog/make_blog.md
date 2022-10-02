@@ -67,7 +67,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3
         with:
-          submodules: true
+          # submodules: true
           fetch-depth: 0
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
