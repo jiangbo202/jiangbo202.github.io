@@ -4,6 +4,7 @@ theme: hugo-theme-stack
 paginate: 5
 title: Bojiang's blog
 hasCJKLanguage: true
+enableEmoji: true
 
 languages:
     en:
