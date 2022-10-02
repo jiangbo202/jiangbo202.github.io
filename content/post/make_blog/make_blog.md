@@ -1,5 +1,5 @@
 ---
-title: "个人博客搭建(基本)"
+title: "个人博客搭建"
 date: 2022-08-27T15:52:41+08:00
 draft: false
 description: Github Pages, actions, hugo, hugo-theme-stack
@@ -13,7 +13,7 @@ tags:
     - 博客
 ---
 
-# 个人博客基础搭建
+# 个人博客搭建
 >    基于: github Pages  
 >    主题: hugo-theme-stack  
 
@@ -103,7 +103,7 @@ git push -u origin main
 
 - [x] 写新文章 
 - [x] 添加评论 
-- [ ]  访问量
-- [ ]  图床
+- [ ] 访问量
+- [ ] 图床
 
 
