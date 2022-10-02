@@ -6,12 +6,28 @@
         <description>Recent content in Categories on Bojiang 的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
-        <lastBuildDate>Sat, 01 Oct 2022 17:16:11 +0800</lastBuildDate><atom:link href="https://jiangbo202.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>centos7</title>
-        <link>https://jiangbo202.github.io/categories/centos7/</link>
-        <pubDate>Sat, 01 Oct 2022 17:16:11 +0800</pubDate>
+        <lastBuildDate>Sun, 02 Oct 2022 20:57:18 +0800</lastBuildDate><atom:link href="https://jiangbo202.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2fa</title>
+        <link>https://jiangbo202.github.io/categories/2fa/</link>
+        <pubDate>Sun, 02 Oct 2022 20:57:18 +0800</pubDate>
         
-        <guid>https://jiangbo202.github.io/categories/centos7/</guid>
+        <guid>https://jiangbo202.github.io/categories/2fa/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>golang</title>
+        <link>https://jiangbo202.github.io/categories/golang/</link>
+        <pubDate>Sun, 02 Oct 2022 20:57:18 +0800</pubDate>
+        
+        <guid>https://jiangbo202.github.io/categories/golang/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>技术</title>
+        <link>https://jiangbo202.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+        <pubDate>Sun, 02 Oct 2022 20:57:18 +0800</pubDate>
+        
+        <guid>https://jiangbo202.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
         <description></description>
         </item>
         <item>
@@ -20,22 +36,6 @@
         <pubDate>Sat, 01 Oct 2022 17:16:11 +0800</pubDate>
         
         <guid>https://jiangbo202.github.io/categories/docker/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>测试</title>
-        <link>https://jiangbo202.github.io/categories/%E6%B5%8B%E8%AF%95/</link>
-        <pubDate>Sat, 27 Aug 2022 17:04:46 +0800</pubDate>
-        
-        <guid>https://jiangbo202.github.io/categories/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>后端</title>
-        <link>https://jiangbo202.github.io/categories/%E5%90%8E%E7%AB%AF/</link>
-        <pubDate>Sat, 27 Aug 2022 17:04:46 +0800</pubDate>
-        
-        <guid>https://jiangbo202.github.io/categories/%E5%90%8E%E7%AB%AF/</guid>
         <description></description>
         </item>
         <item>

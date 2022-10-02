@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jiangbo202.github.io/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,8 +15,14 @@
                 href="https://jiangbo202.github.io/"
                 />
   </url><url>
+    <loc>https://jiangbo202.github.io/tags/2fa/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
+  </url><url>
+    <loc>https://jiangbo202.github.io/categories/2fa/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
+  </url><url>
     <loc>https://jiangbo202.github.io/categories/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,29 +34,26 @@
                 href="https://jiangbo202.github.io/categories/"
                 />
   </url><url>
-    <loc>https://jiangbo202.github.io/tags/centos7/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <loc>https://jiangbo202.github.io/tags/golang/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
   </url><url>
-    <loc>https://jiangbo202.github.io/categories/centos7/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
-  </url><url>
-    <loc>https://jiangbo202.github.io/tags/docker/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
-  </url><url>
-    <loc>https://jiangbo202.github.io/categories/docker/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
-  </url><url>
-    <loc>https://jiangbo202.github.io/p/docker-centos7/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <loc>https://jiangbo202.github.io/categories/golang/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
   </url><url>
     <loc>https://jiangbo202.github.io/post/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
+  </url><url>
+    <loc>https://jiangbo202.github.io/tags/scp/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
   </url><url>
     <loc>https://jiangbo202.github.io/tags/ssh/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
+  </url><url>
+    <loc>https://jiangbo202.github.io/p/ssh%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E4%B8%80%E9%94%AE%E8%B7%B3%E8%BD%AC%E6%88%96scp%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
   </url><url>
     <loc>https://jiangbo202.github.io/tags/</loc>
-    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -62,17 +65,20 @@
                 href="https://jiangbo202.github.io/tags/"
                 />
   </url><url>
-    <loc>https://jiangbo202.github.io/p/docker-mysql/</loc>
-    <lastmod>2022-08-27T17:04:46+08:00</lastmod>
+    <loc>https://jiangbo202.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-10-02T20:57:18+08:00</lastmod>
   </url><url>
-    <loc>https://jiangbo202.github.io/tags/mysql/</loc>
-    <lastmod>2022-08-27T17:04:46+08:00</lastmod>
+    <loc>https://jiangbo202.github.io/tags/centos7/</loc>
+    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
   </url><url>
-    <loc>https://jiangbo202.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-08-27T17:04:46+08:00</lastmod>
+    <loc>https://jiangbo202.github.io/tags/docker/</loc>
+    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
   </url><url>
-    <loc>https://jiangbo202.github.io/categories/%E5%90%8E%E7%AB%AF/</loc>
-    <lastmod>2022-08-27T17:04:46+08:00</lastmod>
+    <loc>https://jiangbo202.github.io/categories/docker/</loc>
+    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
+  </url><url>
+    <loc>https://jiangbo202.github.io/p/docker-centos7/</loc>
+    <lastmod>2022-10-01T17:16:11+08:00</lastmod>
   </url><url>
     <loc>https://jiangbo202.github.io/tags/hugo/</loc>
     <lastmod>2022-08-27T15:52:41+08:00</lastmod>

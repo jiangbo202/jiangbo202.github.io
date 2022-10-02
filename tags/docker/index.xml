@@ -124,15 +124,6 @@
 &lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
 </description>
         </item>
-        <item>
-        <title>Docker Mysql</title>
-        <link>https://jiangbo202.github.io/p/docker-mysql/</link>
-        <pubDate>Sat, 27 Aug 2022 17:04:46 +0800</pubDate>
-        
-        <guid>https://jiangbo202.github.io/p/docker-mysql/</guid>
-        <description>&lt;p&gt;docker 安装mysql&lt;/p&gt;
-</description>
-        </item>
         
     </channel>
 </rss>
