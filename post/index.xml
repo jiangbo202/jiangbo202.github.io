@@ -108,12 +108,12 @@
 </description>
         </item>
         <item>
-        <title>Docker Centos7</title>
-        <link>https://jiangbo202.github.io/p/docker-centos7/</link>
+        <title>dockerd搭建centos7并通过ssh访问</title>
+        <link>https://jiangbo202.github.io/p/dockerd%E6%90%AD%E5%BB%BAcentos7%E5%B9%B6%E9%80%9A%E8%BF%87ssh%E8%AE%BF%E9%97%AE/</link>
         <pubDate>Sat, 01 Oct 2022 17:16:11 +0800</pubDate>
         
-        <guid>https://jiangbo202.github.io/p/docker-centos7/</guid>
-        <description>&lt;img src="https://jiangbo202.github.io/docker_centos7/IMG_1870.jpg" alt="Featured image of post Docker Centos7" /&gt;&lt;h1 id=&#34;dockerd搭建centos7并通过ssh访问&#34;&gt;dockerd搭建centos7并通过ssh访问&lt;/h1&gt;
+        <guid>https://jiangbo202.github.io/p/dockerd%E6%90%AD%E5%BB%BAcentos7%E5%B9%B6%E9%80%9A%E8%BF%87ssh%E8%AE%BF%E9%97%AE/</guid>
+        <description>&lt;img src="https://jiangbo202.github.io/docker_centos7/IMG_1870.jpg" alt="Featured image of post dockerd搭建centos7并通过ssh访问" /&gt;&lt;h1 id=&#34;dockerd搭建centos7并通过ssh访问&#34;&gt;dockerd搭建centos7并通过ssh访问&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;前提&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;安装好docker并启动&lt;/p&gt;
