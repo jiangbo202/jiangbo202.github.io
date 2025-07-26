@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on bobo 的博客</title>
+    <link>https://jiangbo202.github.io/categories/</link>
+    <description>Recent content in Categories on bobo 的博客</description>
+    <image>
+      <title>bobo 的博客</title>
+      <url>https://jiangbo202.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://jiangbo202.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Oct 2022 20:57:18 +0800</lastBuildDate>
+    <atom:link href="https://jiangbo202.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2fa</title>
+      <link>https://jiangbo202.github.io/categories/2fa/</link>
+      <pubDate>Sun, 02 Oct 2022 20:57:18 +0800</pubDate>
+      <guid>https://jiangbo202.github.io/categories/2fa/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
