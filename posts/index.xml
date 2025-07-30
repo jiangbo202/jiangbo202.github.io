@@ -11,8 +11,50 @@
     </image>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Oct 2022 20:57:18 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jiangbo202.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Trip with a Live Photo</title>
+      <link>https://jiangbo202.github.io/posts/my-live-photo-trip/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiangbo202.github.io/posts/my-live-photo-trip/</guid>
+      <description>&lt;p&gt;Here is an amazing Live Photo I took. Long-press on it on your phone, or hover over it on a desktop.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
+      &lt;div class=&#34;photo-wrapper&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://jiangbo202.github.io/posts/my-live-photo-trip/IMG_5674.jpeg&#34;
+             data-video-src=&#34;https://jiangbo202.github.io/posts/my-live-photo-trip/IMG_5674.mp4&#34;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;text-wrapper&#34;&gt;
+        这里是你的&lt;strong&gt;说明文字&lt;/strong&gt;，支持Markdown。
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+
+&lt;p&gt;It&amp;rsquo;s that simple.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ssh终端工具(一键跳转或scp文件)</title>
       <link>https://jiangbo202.github.io/posts/term_tool/</link>
