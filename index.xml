@@ -11,8 +11,342 @@
     </image>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jiangbo202.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的页面包文章</title>
+      <link>https://jiangbo202.github.io/posts/test-gallery/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiangbo202.github.io/posts/test-gallery/</guid>
+      <description>&lt;p&gt;这是一些介绍文字。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
+      &lt;div class=&#34;photo-wrapper&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.jpeg&#34;
+             data-video-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.mp4&#34;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;text-wrapper&#34;&gt;
+        &lt;pre&gt;&lt;code&gt;这里是你的**说明文字**，支持Markdown。
+&lt;/code&gt;&lt;/pre&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+
+似懂非懂
+
+
+&lt;style&gt;
+.gallery-wrapper {
+  position: relative;
+  margin: 1.5rem auto;
+}
+
+.gallery-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;  
+  scroll-behavior: smooth;  
+  gap: 15px;
+  padding: 10px 0;
+   
+  scrollbar-width: none;  
+  -ms-overflow-style: none;   
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none;  
+}
+
+ 
+.gallery-container &gt; * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;  
+  margin: 0 !important;
+  max-width: none !important;
+  height: 450px;  
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #f0f0f0;
+}
+
+.gallery-container &gt; img {
+  width: auto;
+  height: 100%;
+  background-color: transparent;
+}
+
+.gallery-container .live-photo-container {
+  width: 85vw;
+  max-width: 600px !important;
+}
+
+.gallery-container .live-photo-container[style*=&#34;max-width: 400px&#34;] {
+  width: 60vw;
+  max-width: 380px !important;
+}
+
+ 
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.gallery-nav-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav-btn.prev {
+  left: 10px;
+}
+
+.gallery-nav-btn.next {
+  right: 10px;
+}
+
+.gallery-nav-btn[disabled] {
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;
+}
+
+ 
+.gallery-dots {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.gallery-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.gallery-dot:hover {
+    transform: scale(1.2);
+}
+
+.gallery-dot.active {
+  background-color: #333;
+}
+&lt;/style&gt;
+
+&lt;div class=&#34;gallery-wrapper&#34;&gt;
+  &lt;button class=&#34;gallery-nav-btn prev&#34; aria-label=&#34;Previous image&#34;&gt;&amp;#10094;&lt;/button&gt;
+  &lt;div class=&#34;gallery-container&#34;&gt;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
+      &lt;div class=&#34;photo-wrapper&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.jpeg&#34;
+             data-video-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.mp4&#34;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;text-wrapper&#34;&gt;
+        这里是你的&lt;strong&gt;说明文字&lt;/strong&gt;，支持Markdown。
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+
+&lt;img src=&#34;3.png&#34; alt=&#34;图片3&#34;&gt;
+&lt;img src=&#34;4.png&#34; alt=&#34;图片4&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
+      &lt;div class=&#34;photo-wrapper&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.jpeg&#34;
+             data-video-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.mp4&#34;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;text-wrapper&#34;&gt;
+        这里是你的&lt;strong&gt;说明文字&lt;/strong&gt;，支持Markdown。
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+
+
+  &lt;/div&gt;
+  &lt;button class=&#34;gallery-nav-btn next&#34; aria-label=&#34;Next image&#34;&gt;&amp;#10095;&lt;/button&gt;
+  &lt;div class=&#34;gallery-dots&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+
+(function() {
+  
+  document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+
+    
+    const galleries = document.querySelectorAll(&#39;.gallery-wrapper&#39;);
+
+    galleries.forEach((gallery, galleryIndex) =&gt; {
+      const container = gallery.querySelector(&#39;.gallery-container&#39;);
+      const prevBtn = gallery.querySelector(&#39;.gallery-nav-btn.prev&#39;);
+      const nextBtn = gallery.querySelector(&#39;.gallery-nav-btn.next&#39;);
+      const dotsContainer = gallery.querySelector(&#39;.gallery-dots&#39;);
+      const items = Array.from(container.children);
+
+      if (items.length &lt;= 1) {
+        prevBtn.style.display = &#39;none&#39;;
+        nextBtn.style.display = &#39;none&#39;;
+        dotsContainer.style.display = &#39;none&#39;;
+        return; 
+      }
+
+      
+      items.forEach((item, index) =&gt; {
+        const dot = document.createElement(&#39;button&#39;);
+        dot.classList.add(&#39;gallery-dot&#39;);
+        dot.setAttribute(&#39;aria-label&#39;, `Go to image ${index + 1}`);
+        dot.addEventListener(&#39;click&#39;, () =&gt; {
+          
+          items[index].scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39;, inline: &#39;start&#39; });
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsContainer.children);
+
+      
+      prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        container.scrollBy({ left: -container.clientWidth, behavior: &#39;smooth&#39; });
+      });
+
+      nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        container.scrollBy({ left: container.clientWidth, behavior: &#39;smooth&#39; });
+      });
+
+      
+      const updateControls = () =&gt; {
+        const scrollLeft = container.scrollLeft;
+        const scrollWidth = container.scrollWidth;
+        const clientWidth = container.clientWidth;
+
+        
+        prevBtn.disabled = scrollLeft &lt; 1;
+        nextBtn.disabled = scrollLeft + clientWidth &gt;= scrollWidth - 1;
+
+        
+        let activeIndex = -1;
+        for (let i = 0; i &lt; items.length; i++) {
+            const item = items[i];
+            
+            if (item.offsetLeft &lt;= scrollLeft + clientWidth / 2 &amp;&amp; item.offsetLeft + item.offsetWidth &gt; scrollLeft + clientWidth / 2) {
+                activeIndex = i;
+                break;
+            }
+        }
+
+        dots.forEach((dot, index) =&gt; {
+          dot.classList.toggle(&#39;active&#39;, index === activeIndex);
+        });
+      };
+
+      
+      const observer = new IntersectionObserver((entries, obs) =&gt; {
+          entries.forEach(entry =&gt; {
+              if(entry.isIntersecting) {
+                  
+                  setTimeout(updateControls, 100);
+              }
+          });
+      }, { threshold: 0.5, root: container });
+
+      items.forEach(item =&gt; {
+          observer.observe(item);
+      });
+
+      
+      updateControls();
+    });
+  });
+})();
+&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My Trip with a Live Photo</title>
       <link>https://jiangbo202.github.io/posts/my-live-photo-trip/</link>
@@ -77,6 +411,9 @@
 &lt;li&gt;胡思乱想, 瞎折腾&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;联系我&#34;&gt;联系我&lt;/h3&gt;
+&lt;!-- 你可以在以下平台找到我：
+ - **GitHub**: [YourGitHubUsername](https://github.com/YourGitHubUsername)
+ - **LinkedIn**: [YourLinkedInProfile](https://www.linkedin.com/in/YourLinkedInProfile/) --&gt;
 &lt;p&gt;希望你在这里能找到有价值的内容！&lt;/p&gt;</description>
     </item>
   </channel>
