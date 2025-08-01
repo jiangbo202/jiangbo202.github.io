@@ -411,9 +411,11 @@
 &lt;li&gt;胡思乱想, 瞎折腾&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;联系我&#34;&gt;联系我&lt;/h3&gt;
-&lt;!-- 你可以在以下平台找到我：
- - **GitHub**: [YourGitHubUsername](https://github.com/YourGitHubUsername)
- - **LinkedIn**: [YourLinkedInProfile](https://www.linkedin.com/in/YourLinkedInProfile/) --&gt;
+&lt;p&gt;你可以在以下平台找到我：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/jiangbo202&#34;&gt;jiangbo202&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;!-- - **LinkedIn**: [YourLinkedInProfile](https://www.linkedin.com/in/YourLinkedInProfile/) --&gt;
 &lt;p&gt;希望你在这里能找到有价值的内容！&lt;/p&gt;</description>
     </item>
   </channel>
