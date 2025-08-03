@@ -11,67 +11,33 @@
     </image>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 31 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jiangbo202.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>我的页面包文章</title>
-      <link>https://jiangbo202.github.io/posts/test-gallery/</link>
-      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://jiangbo202.github.io/posts/test-gallery/</guid>
-      <description>&lt;p&gt;这是一些介绍文字。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
-      &lt;div class=&#34;photo-wrapper&#34;&gt;
-        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
-             data-live-photo
-             data-photo-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.jpeg&#34;
-             data-video-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.mp4&#34;&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#34;text-wrapper&#34;&gt;
-        &lt;pre&gt;&lt;code&gt;这里是你的**说明文字**，支持Markdown。
-&lt;/code&gt;&lt;/pre&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-  
-
-
-似懂非懂
+      <title>香港之行[202404]</title>
+      <link>https://jiangbo202.github.io/posts/trip-to-hongkong202404/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiangbo202.github.io/posts/trip-to-hongkong202404/</guid>
+      <description>&lt;p&gt;去年2024年4月底去了一趟香港, 记录一下见闻(多图预警)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;街景[铜锣湾 -&amp;gt; 时代广场-&amp;gt; 希慎广场-&amp;gt; 会展中心-&amp;gt; 金紫荆广场-&amp;gt; 回归纪念碑-&amp;gt; 中环 -&amp;gt; 天星小轮 -&amp;gt; 尖沙咀 ]
 
 
 &lt;style&gt;
 .gallery-wrapper {
   position: relative;
   margin: 1.5rem auto;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .gallery-container {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;  
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
   gap: 15px;
-  padding: 10px 0;
-   
+  padding: 10px;
   scrollbar-width: none;  
   -ms-overflow-style: none;   
 }
@@ -82,32 +48,27 @@
 
  
 .gallery-container &gt; * {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;  
+  flex: 0 0 27%;  
   margin: 0 !important;
-  max-width: none !important;
-  height: 450px;  
+  aspect-ratio: 636 / 848;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   background-color: #f0f0f0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.gallery-container &gt; img {
-  width: auto;
-  height: 100%;
-  background-color: transparent;
+.gallery-container &gt; *:hover {
+    transform: scale(1.03);
 }
 
+.gallery-container &gt; img,
 .gallery-container .live-photo-container {
-  width: 85vw;
-  max-width: 600px !important;
-}
-
-.gallery-container .live-photo-container[style*=&#34;max-width: 400px&#34;] {
-  width: 60vw;
-  max-width: 380px !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: transparent;
 }
 
  
@@ -149,29 +110,106 @@
 }
 
  
-.gallery-dots {
-  text-align: center;
-  padding-top: 10px;
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;  
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.gallery-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #c4c4c4;
-  margin: 0 5px;
+.lightbox-overlay.show {
+  display: flex;
+}
+
+.lightbox-media-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content-img,
+.lightbox-content-video {
+    max-width: 85vw;
+    max-height: 85vh;
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: none;  
+}
+
+.lightbox-live-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 1;
+    display: none;  
+    pointer-events: none;  
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: color 0.2s;
+  z-index: 1002;
 }
 
-.gallery-dot:hover {
-    transform: scale(1.2);
+.lightbox-close:hover {
+  color: #bbb;
 }
 
-.gallery-dot.active {
-  background-color: #333;
+ 
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  z-index: 1001;
 }
+
+.lightbox-nav:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.lightbox-nav.prev {
+  left: 20px;
+}
+
+.lightbox-nav.next {
+  right: 20px;
+}
+
+.lightbox-nav[disabled] {
+  display: none;
+}
+
 &lt;/style&gt;
 
 &lt;div class=&#34;gallery-wrapper&#34;&gt;
@@ -192,202 +230,15 @@
 
 
 
-
   
-  
-    
-    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
-      &lt;div class=&#34;photo-wrapper&#34;&gt;
-        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
-             data-live-photo
-             data-photo-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.jpeg&#34;
-             data-video-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.mp4&#34;&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#34;text-wrapper&#34;&gt;
-        这里是你的&lt;strong&gt;说明文字&lt;/strong&gt;，支持Markdown。
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-  
-
-
-&lt;img src=&#34;3.png&#34; alt=&#34;图片3&#34;&gt;
-&lt;img src=&#34;4.png&#34; alt=&#34;图片4&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
-      &lt;div class=&#34;photo-wrapper&#34;&gt;
-        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
-             data-live-photo
-             data-photo-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.jpeg&#34;
-             data-video-src=&#34;https://jiangbo202.github.io/posts/test-gallery/IMG_5674.mp4&#34;&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#34;text-wrapper&#34;&gt;
-        这里是你的&lt;strong&gt;说明文字&lt;/strong&gt;，支持Markdown。
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-  
-
-
-
-  &lt;/div&gt;
-  &lt;button class=&#34;gallery-nav-btn next&#34; aria-label=&#34;Next image&#34;&gt;&amp;#10095;&lt;/button&gt;
-  &lt;div class=&#34;gallery-dots&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-
-(function() {
-  
-  document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
-
-    
-    const galleries = document.querySelectorAll(&#39;.gallery-wrapper&#39;);
-
-    galleries.forEach((gallery, galleryIndex) =&gt; {
-      const container = gallery.querySelector(&#39;.gallery-container&#39;);
-      const prevBtn = gallery.querySelector(&#39;.gallery-nav-btn.prev&#39;);
-      const nextBtn = gallery.querySelector(&#39;.gallery-nav-btn.next&#39;);
-      const dotsContainer = gallery.querySelector(&#39;.gallery-dots&#39;);
-      const items = Array.from(container.children);
-
-      if (items.length &lt;= 1) {
-        prevBtn.style.display = &#39;none&#39;;
-        nextBtn.style.display = &#39;none&#39;;
-        dotsContainer.style.display = &#39;none&#39;;
-        return; 
-      }
-
-      
-      items.forEach((item, index) =&gt; {
-        const dot = document.createElement(&#39;button&#39;);
-        dot.classList.add(&#39;gallery-dot&#39;);
-        dot.setAttribute(&#39;aria-label&#39;, `Go to image ${index + 1}`);
-        dot.addEventListener(&#39;click&#39;, () =&gt; {
-          
-          items[index].scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39;, inline: &#39;start&#39; });
-        });
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = Array.from(dotsContainer.children);
-
-      
-      prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
-        container.scrollBy({ left: -container.clientWidth, behavior: &#39;smooth&#39; });
-      });
-
-      nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
-        container.scrollBy({ left: container.clientWidth, behavior: &#39;smooth&#39; });
-      });
-
-      
-      const updateControls = () =&gt; {
-        const scrollLeft = container.scrollLeft;
-        const scrollWidth = container.scrollWidth;
-        const clientWidth = container.clientWidth;
-
-        
-        prevBtn.disabled = scrollLeft &lt; 1;
-        nextBtn.disabled = scrollLeft + clientWidth &gt;= scrollWidth - 1;
-
-        
-        let activeIndex = -1;
-        for (let i = 0; i &lt; items.length; i++) {
-            const item = items[i];
-            
-            if (item.offsetLeft &lt;= scrollLeft + clientWidth / 2 &amp;&amp; item.offsetLeft + item.offsetWidth &gt; scrollLeft + clientWidth / 2) {
-                activeIndex = i;
-                break;
-            }
-        }
-
-        dots.forEach((dot, index) =&gt; {
-          dot.classList.toggle(&#39;active&#39;, index === activeIndex);
-        });
-      };
-
-      
-      const observer = new IntersectionObserver((entries, obs) =&gt; {
-          entries.forEach(entry =&gt; {
-              if(entry.isIntersecting) {
-                  
-                  setTimeout(updateControls, 100);
-              }
-          });
-      }, { threshold: 0.5, root: container });
-
-      items.forEach(item =&gt; {
-          observer.observe(item);
-      });
-
-      
-      updateControls();
-    });
-  });
-})();
-&lt;/script&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Trip with a Live Photo</title>
-      <link>https://jiangbo202.github.io/posts/my-live-photo-trip/</link>
-      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://jiangbo202.github.io/posts/my-live-photo-trip/</guid>
-      <description>&lt;p&gt;Here is an amazing Live Photo I took. Long-press on it on your phone, or hover over it on a desktop.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    &lt;div class=&#34;livephoto-side-by-side&#34;&gt;
-      &lt;div class=&#34;photo-wrapper&#34;&gt;
-        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
-             data-live-photo
-             data-photo-src=&#34;https://jiangbo202.github.io/posts/my-live-photo-trip/IMG_5674.jpeg&#34;
-             data-video-src=&#34;https://jiangbo202.github.io/posts/my-live-photo-trip/IMG_5674.mp4&#34;&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#34;text-wrapper&#34;&gt;
-        这里是你的&lt;strong&gt;说明文字&lt;/strong&gt;，支持Markdown。
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-  
-
-
-&lt;p&gt;It&amp;rsquo;s that simple.&lt;/p&gt;</description>
+  &lt;p style=&#34;padding: 1rem; background-color: #ffdddd; color: #d8000c; border: 1px solid #ffc2c2; border-radius: 5px; margin: 1rem 0;&#34;&gt;
+    &lt;strong&gt;Live Photo Shortcode Error:&lt;/strong&gt;&lt;br&gt;
+    Could not find the required media files within this Page Bundle. Please check the filenames.
+    &lt;ul&gt;
+      &lt;li&gt;JPG file specified: &lt;code&gt;IMG_3356.jpg&lt;/code&gt; (Found: &lt;strong&gt;No&lt;/strong&gt;)&lt;/li&gt;
+      &lt;li&gt;Video file specified (mp4 or mov): &lt;code&gt;IMG_3356.mp4&lt;/code&gt; (Found: &lt;strong&gt;No&lt;/strong&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;</description>
     </item>
     <item>
       <title>ssh终端工具(一键跳转或scp文件)</title>
