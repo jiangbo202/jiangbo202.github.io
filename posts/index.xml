@@ -219,18 +219,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
   &lt;p style=&#34;padding: 1rem; background-color: #ffdddd; color: #d8000c; border: 1px solid #ffc2c2; border-radius: 5px; margin: 1rem 0;&#34;&gt;
     &lt;strong&gt;Live Photo Shortcode Error:&lt;/strong&gt;&lt;br&gt;
     Could not find the required media files within this Page Bundle. Please check the filenames.
