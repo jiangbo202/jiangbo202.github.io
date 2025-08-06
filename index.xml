@@ -219,14 +219,876 @@
 
 
 
-  &lt;p style=&#34;padding: 1rem; background-color: #ffdddd; color: #d8000c; border: 1px solid #ffc2c2; border-radius: 5px; margin: 1rem 0;&#34;&gt;
-    &lt;strong&gt;Live Photo Shortcode Error:&lt;/strong&gt;&lt;br&gt;
-    Could not find the required media files within this Page Bundle. Please check the filenames.
-    &lt;ul&gt;
-      &lt;li&gt;JPG file specified: &lt;code&gt;IMG_3356.jpg&lt;/code&gt; (Found: &lt;strong&gt;No&lt;/strong&gt;)&lt;/li&gt;
-      &lt;li&gt;Video file specified (mp4 or mov): &lt;code&gt;IMG_3356.mp4&lt;/code&gt; (Found: &lt;strong&gt;No&lt;/strong&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/p&gt;</description>
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3356.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3356.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3419.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3419.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3357.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3357.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3355.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3355.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3318.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3318.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3457.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3457.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3387.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3387.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3437.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3437.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3351.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3351.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3386.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3386.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3392.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3392.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3384.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3384.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3390.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3390.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3409.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3409.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3408.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3408.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3391.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3391.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3385.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3385.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3381.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3381.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3427.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3427.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3368.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3368.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3426.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3426.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3383.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3383.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3359.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3359.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3371.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3371.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3365.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3365.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3364.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3364.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3402.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3402.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3370.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3370.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3428.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3428.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3366.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3366.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3372.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3372.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3414.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3414.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3373.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3373.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3367.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3367.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3388.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3388.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3363.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3363.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3405.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3405.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3411.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3411.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3377.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3377.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3438.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3438.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3362.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3362.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3389.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3389.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3374.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3374.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3406.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3406.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3360.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3360.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3407.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3407.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3361.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3361.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3375.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3375.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+&lt;img src=&#34;IMG_3474.jpg&#34; alt=&#34;图片3&#34;&gt;
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3306.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3306.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3307.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3307.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3313.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3313.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3314.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3314.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3315.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3315.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+
+
+  
+    
+    &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-live-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3303.jpg&#34;
+             data-video-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3303.mp4&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+
+  &lt;/div&gt;
+  &lt;button class=&#34;gallery-nav-btn next&#34; aria-label=&#34;Next image&#34;&gt;&amp;#10095;&lt;/button&gt;
+
+  
+  &lt;div class=&#34;lightbox-overlay&#34;&gt;
+    &lt;span class=&#34;lightbox-close&#34;&gt;&amp;times;&lt;/span&gt;
+    &lt;button class=&#34;lightbox-nav prev&#34; aria-label=&#34;Previous image&#34;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;div class=&#34;lightbox-media-container&#34;&gt;
+        &lt;img class=&#34;lightbox-content-img&#34; alt=&#34;Enlarged view&#34;&gt;
+        &lt;video class=&#34;lightbox-content-video&#34; playsinline muted loop&gt;&lt;/video&gt;
+        &lt;div class=&#34;lightbox-live-badge&#34;&gt;LIVE&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&#34;lightbox-nav next&#34; aria-label=&#34;Next image&#34;&gt;&amp;#10095;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+  document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+    document.querySelectorAll(&#39;.gallery-wrapper&#39;).forEach(gallery =&gt; {
+      const container = gallery.querySelector(&#39;.gallery-container&#39;);
+      if (!container) return;
+
+      const items = Array.from(container.children);
+      if (items.length === 0) return;
+
+      const prevBtn = gallery.querySelector(&#39;.gallery-nav-btn.prev&#39;);
+      const nextBtn = gallery.querySelector(&#39;.gallery-nav-btn.next&#39;);
+
+      
+      const lightbox = gallery.querySelector(&#39;.lightbox-overlay&#39;);
+      const mediaContainer = gallery.querySelector(&#39;.lightbox-media-container&#39;);
+      const lightboxImg = gallery.querySelector(&#39;.lightbox-content-img&#39;);
+      const lightboxVideo = gallery.querySelector(&#39;.lightbox-content-video&#39;);
+      const lightboxClose = gallery.querySelector(&#39;.lightbox-close&#39;);
+      const lightboxPrev = gallery.querySelector(&#39;.lightbox-nav.prev&#39;);
+      const lightboxNext = gallery.querySelector(&#39;.lightbox-nav.next&#39;);
+      const lightboxLiveBadge = gallery.querySelector(&#39;.lightbox-live-badge&#39;);
+
+      let galleryItems = []; 
+      let currentItemIndex = -1;
+
+      
+      items.forEach(item =&gt; {
+        let photoSrc = &#39;&#39;;
+        let videoSrc = null;
+
+        const livePhotoElement = item.querySelector(&#39;[data-photo-src]&#39;);
+        if (livePhotoElement) {
+          photoSrc = livePhotoElement.dataset.photoSrc;
+          videoSrc = livePhotoElement.dataset.videoSrc || null;
+        } else {
+          const imgElement = item.tagName === &#39;IMG&#39; ? item : item.querySelector(&#39;img&#39;);
+          if (imgElement) {
+            photoSrc = imgElement.src;
+          }
+        }
+
+        if (photoSrc) {
+          galleryItems.push({ photoSrc, videoSrc });
+        }
+      });
+
+      const showItem = (index) =&gt; {
+        if (index &lt; 0 || index &gt;= galleryItems.length) return;
+        currentItemIndex = index;
+
+        const item = galleryItems[index];
+
+        lightboxImg.src = item.photoSrc;
+        lightboxImg.style.display = &#39;block&#39;;
+
+        if (item.videoSrc) {
+            lightboxVideo.src = item.videoSrc;
+            lightboxVideo.style.display = &#39;none&#39;;
+            if (lightboxLiveBadge) lightboxLiveBadge.style.display = &#39;block&#39;; 
+        } else {
+            lightboxVideo.src = &#39;&#39;;
+            lightboxVideo.style.display = &#39;none&#39;;
+            if (lightboxLiveBadge) lightboxLiveBadge.style.display = &#39;none&#39;; 
+        }
+
+        lightbox.classList.add(&#39;show&#39;);
+        lightboxPrev.disabled = (index === 0);
+        lightboxNext.disabled = (index === galleryItems.length - 1);
+      };
+
+      items.forEach((item, index) =&gt; {
+        item.addEventListener(&#39;click&#39;, () =&gt; {
+          let photoSrc = &#39;&#39;;
+          const livePhotoElement = item.querySelector(&#39;[data-photo-src]&#39;);
+          if (livePhotoElement) {
+            photoSrc = livePhotoElement.dataset.photoSrc;
+          } else {
+            const imgElement = item.tagName === &#39;IMG&#39; ? item : item.querySelector(&#39;img&#39;);
+            if (imgElement) {
+              photoSrc = imgElement.src;
+            }
+          }
+          const sourceIndex = galleryItems.findIndex(i =&gt; i.photoSrc === photoSrc);
+          if(sourceIndex !== -1) {
+            showItem(sourceIndex);
+          }
+        });
+      });
+
+      
+      mediaContainer.addEventListener(&#39;mouseenter&#39;, () =&gt; {
+        const item = galleryItems[currentItemIndex];
+        if (item &amp;&amp; item.videoSrc) {
+          lightboxImg.style.display = &#39;none&#39;;
+          lightboxVideo.style.display = &#39;block&#39;;
+          lightboxVideo.play().catch(e =&gt; {}); 
+        }
+      });
+
+      mediaContainer.addEventListener(&#39;mouseleave&#39;, () =&gt; {
+        const item = galleryItems[currentItemIndex];
+        if (item &amp;&amp; item.videoSrc) {
+          lightboxVideo.pause();
+          lightboxVideo.currentTime = 0;
+          lightboxImg.style.display = &#39;block&#39;;
+          lightboxVideo.style.display = &#39;none&#39;;
+        }
+      });
+
+      const closeLightbox = () =&gt; {
+        lightbox.classList.remove(&#39;show&#39;);
+        lightboxVideo.pause();
+      };
+
+      lightboxClose.addEventListener(&#39;click&#39;, closeLightbox);
+      lightboxPrev.addEventListener(&#39;click&#39;, () =&gt; showItem(currentItemIndex - 1));
+      lightboxNext.addEventListener(&#39;click&#39;, () =&gt; showItem(currentItemIndex + 1));
+
+      
+      if (items.length &lt;= 1) {
+        if (prevBtn) prevBtn.style.display = &#39;none&#39;;
+        if (nextBtn) nextBtn.style.display = &#39;none&#39;;
+        return;
+      }
+
+      prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        container.scrollBy({ left: -container.clientWidth * 0.85, behavior: &#39;smooth&#39; });
+      });
+
+      nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        container.scrollBy({ left: container.clientWidth * 0.85, behavior: &#39;smooth&#39; });
+      });
+
+      const updateControls = () =&gt; {
+        const scrollLeft = container.scrollLeft;
+        const scrollWidth = container.scrollWidth;
+        const clientWidth = container.clientWidth;
+        prevBtn.disabled = scrollLeft &lt; 10;
+        nextBtn.disabled = scrollLeft + clientWidth &gt;= scrollWidth - 10;
+      };
+
+      let scrollTimer;
+      container.addEventListener(&#39;scroll&#39;, () =&gt; {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(updateControls, 100);
+      });
+
+      updateControls();
+    });
+  });
+})();
+&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>ssh终端工具(一键跳转或scp文件)</title>
