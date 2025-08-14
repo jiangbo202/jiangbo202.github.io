@@ -57,6 +57,66 @@
   background-color: #f0f0f0;
   cursor: pointer;
   transition: transform 0.2s ease;
+  position: relative;
+}
+
+ 
+.gallery-item-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+              linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+              linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+  100% { background-position: 20px 0, 20px 10px, 30px -10px, 10px 0px; }
+}
+
+.gallery-loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ddd;
+  border-top: 3px solid #666;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+ 
+.gallery-container img[data-lazy]:not([data-loaded]) {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-container img[data-loaded] {
+  opacity: 1;
+}
+
+ 
+[data-photo-src] {
+  position: relative;
+}
+
+[data-photo-src] .gallery-item-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .gallery-container &gt; *:hover {
@@ -798,7 +858,10 @@
   
     
     &lt;div class=&#34;live-photo-container&#34; style=&#34;max-width: 400px; margin: 1.5rem auto;&#34;&gt;
-        &lt;img src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3474.webp&#34; alt=&#34;IMG_3474.webp&#34; style=&#34;width: 100%; height: auto; border-radius: 8px; display: block;&#34; /&gt;&lt;/div&gt;
+        &lt;div style=&#34;width: 100%; padding-top: 133.33%; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;&#34;
+             data-static-photo
+             data-photo-src=&#34;https://pub-f6a02bc7e21b4de099741bd8b0cbd232.r2.dev/IMG_3474.webp&#34;&gt;
+        &lt;/div&gt;&lt;/div&gt;
   
 
 
@@ -903,6 +966,190 @@
       const nextBtn = gallery.querySelector(&#39;.gallery-nav-btn.next&#39;);
 
       
+      const createPlaceholder = () =&gt; {
+        const placeholder = document.createElement(&#39;div&#39;);
+        placeholder.className = &#39;gallery-item-placeholder&#39;;
+        placeholder.innerHTML = &#39;&lt;div class=&#34;gallery-loading-spinner&#34;&gt;&lt;/div&gt;&#39;;
+        return placeholder;
+      };
+
+      const lazyLoadImages = () =&gt; {
+        const imageObserver = new IntersectionObserver((entries) =&gt; {
+          entries.forEach(entry =&gt; {
+            if (entry.isIntersecting) {
+              const container = entry.target;
+              const img = container.querySelector(&#39;img[data-lazy]&#39;);
+              const livePhotoElement = container.querySelector(&#39;[data-photo-src]&#39;);
+              
+              
+              if (img &amp;&amp; img.dataset.lazy &amp;&amp; img.dataset.loaded !== &#39;true&#39;) {
+                const placeholder = container.querySelector(&#39;.gallery-item-placeholder&#39;);
+                
+                img.onload = () =&gt; {
+                  img.dataset.loaded = &#39;true&#39;;
+                  if (placeholder) {
+                    placeholder.style.display = &#39;none&#39;;
+                  }
+                };
+                
+                img.onerror = () =&gt; {
+                  if (placeholder) {
+                    placeholder.innerHTML = &#39;&lt;div style=&#34;color: #999; font-size: 12px;&#34;&gt;加载失败&lt;/div&gt;&#39;;
+                  }
+                };
+                
+                
+                img.src = img.dataset.lazy;
+                img.removeAttribute(&#39;data-lazy&#39;);
+                
+                imageObserver.unobserve(container);
+              } 
+              
+              else if (livePhotoElement &amp;&amp; livePhotoElement.dataset.photoSrc &amp;&amp; livePhotoElement.dataset.loaded !== &#39;true&#39;) {
+                
+                const placeholder = livePhotoElement.querySelector(&#39;.gallery-item-placeholder&#39;) || 
+                                 container.querySelector(&#39;.gallery-item-placeholder&#39;);
+                const photoSrc = livePhotoElement.dataset.photoSrc;
+                const isStaticPhoto = livePhotoElement.hasAttribute(&#39;data-static-photo&#39;);
+                
+                const tempImg = new Image();
+                tempImg.onload = () =&gt; {
+                  livePhotoElement.dataset.loaded = &#39;true&#39;;
+                  if (placeholder) {
+                    placeholder.style.opacity = &#39;0&#39;;
+                    placeholder.style.transition = &#39;opacity 0.3s ease&#39;;
+                    setTimeout(() =&gt; {
+                      placeholder.style.display = &#39;none&#39;;
+                    }, 300);
+                  }
+                  
+                  
+                  livePhotoElement.style.backgroundImage = `url(${photoSrc})`;
+                  livePhotoElement.style.backgroundSize = &#39;cover&#39;;
+                  livePhotoElement.style.backgroundPosition = &#39;center&#39;;
+                  
+                  
+                  if (isStaticPhoto) {
+                    livePhotoElement.style.backgroundRepeat = &#39;no-repeat&#39;;
+                  }
+                };
+                tempImg.onerror = () =&gt; {
+                  if (placeholder) {
+                    placeholder.innerHTML = &#39;&lt;div style=&#34;color: #999; font-size: 12px;&#34;&gt;加载失败&lt;/div&gt;&#39;;
+                  }
+                };
+                tempImg.src = photoSrc;
+                
+                imageObserver.unobserve(container);
+              }
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: &#39;20px&#39;, 
+          threshold: 0.1
+        });
+
+        
+        items.forEach(item =&gt; {
+          const img = item.querySelector(&#39;img&#39;);
+          const livePhotoElement = item.querySelector(&#39;[data-photo-src]&#39;);
+          
+          let shouldObserve = false;
+          
+          
+          if (img &amp;&amp; img.src &amp;&amp; img.src.trim() !== &#39;&#39; &amp;&amp; !img.src.includes(window.location.href)) {
+            
+            img.dataset.lazy = img.src;
+            img.src = &#39;&#39;; 
+            img.dataset.loaded = &#39;false&#39;;
+            shouldObserve = true;
+          }
+          
+          
+          if (livePhotoElement &amp;&amp; livePhotoElement.dataset.photoSrc &amp;&amp; !livePhotoElement.dataset.loaded) {
+            
+            livePhotoElement.style.backgroundImage = &#39;&#39;;
+            livePhotoElement.style.backgroundColor = &#39;#f0f0f0&#39;;
+            livePhotoElement.dataset.loaded = &#39;false&#39;;
+            shouldObserve = true;
+          }
+          
+          
+          if (shouldObserve) {
+            
+            const placeholder = createPlaceholder();
+            if (livePhotoElement) {
+              
+              livePhotoElement.appendChild(placeholder);
+            } else {
+              
+              item.appendChild(placeholder);
+            }
+            
+            
+            imageObserver.observe(item);
+          }
+        });
+      };
+
+      
+      if (&#39;IntersectionObserver&#39; in window) {
+        lazyLoadImages();
+      } else {
+        
+        items.forEach(item =&gt; {
+          const img = item.querySelector(&#39;img[data-lazy]&#39;);
+          if (img) {
+            img.src = img.dataset.lazy;
+            img.removeAttribute(&#39;data-lazy&#39;);
+            img.dataset.loaded = &#39;true&#39;;
+          }
+        });
+      }
+
+      
+      items.forEach(item =&gt; {
+        const livePhotoElement = item.querySelector(&#39;[data-live-photo][data-video-src]&#39;);
+        if (livePhotoElement &amp;&amp; livePhotoElement.dataset.videoSrc) {
+          const videoSrc = livePhotoElement.dataset.videoSrc;
+          let tempVideo = null;
+
+          item.addEventListener(&#39;mouseenter&#39;, () =&gt; {
+            
+            if (livePhotoElement.dataset.loaded === &#39;true&#39;) {
+              if (!tempVideo) {
+                tempVideo = document.createElement(&#39;video&#39;);
+                tempVideo.src = videoSrc;
+                tempVideo.style.cssText = livePhotoElement.style.cssText;
+                tempVideo.style.position = &#39;absolute&#39;;
+                tempVideo.style.top = &#39;0&#39;;
+                tempVideo.style.left = &#39;0&#39;;
+                tempVideo.style.width = &#39;100%&#39;;
+                tempVideo.style.height = &#39;100%&#39;;
+                tempVideo.style.objectFit = &#39;cover&#39;;
+                tempVideo.style.borderRadius = &#39;8px&#39;;
+                tempVideo.muted = true;
+                tempVideo.loop = true;
+                tempVideo.playsInline = true;
+                livePhotoElement.appendChild(tempVideo);
+              }
+              tempVideo.style.display = &#39;block&#39;;
+              tempVideo.play().catch(() =&gt; {});
+            }
+          });
+
+          item.addEventListener(&#39;mouseleave&#39;, () =&gt; {
+            if (tempVideo) {
+              tempVideo.pause();
+              tempVideo.currentTime = 0;
+              tempVideo.style.display = &#39;none&#39;;
+            }
+          });
+        }
+      });
+
+      
       const lightbox = gallery.querySelector(&#39;.lightbox-overlay&#39;);
       const mediaContainer = gallery.querySelector(&#39;.lightbox-media-container&#39;);
       const lightboxImg = gallery.querySelector(&#39;.lightbox-content-img&#39;);
@@ -927,7 +1174,8 @@
         } else {
           const imgElement = item.tagName === &#39;IMG&#39; ? item : item.querySelector(&#39;img&#39;);
           if (imgElement) {
-            photoSrc = imgElement.src;
+            
+            photoSrc = imgElement.dataset.lazy || imgElement.src;
           }
         }
 
@@ -936,14 +1184,34 @@
         }
       });
 
+      const preloadImage = (src) =&gt; {
+        return new Promise((resolve, reject) =&gt; {
+          const img = new Image();
+          img.onload = () =&gt; resolve(img);
+          img.onerror = reject;
+          img.src = src;
+        });
+      };
+
       const showItem = (index) =&gt; {
         if (index &lt; 0 || index &gt;= galleryItems.length) return;
         currentItemIndex = index;
 
         const item = galleryItems[index];
 
-        lightboxImg.src = item.photoSrc;
-        lightboxImg.style.display = &#39;block&#39;;
+        
+        lightboxImg.style.opacity = &#39;0.5&#39;;
+        lightboxImg.src = &#39;&#39;;
+
+        
+        preloadImage(item.photoSrc).then(() =&gt; {
+          lightboxImg.src = item.photoSrc;
+          lightboxImg.style.opacity = &#39;1&#39;;
+          lightboxImg.style.display = &#39;block&#39;;
+        }).catch(() =&gt; {
+          lightboxImg.style.opacity = &#39;1&#39;;
+          lightboxImg.alt = &#39;图片加载失败&#39;;
+        });
 
         if (item.videoSrc) {
             lightboxVideo.src = item.videoSrc;
@@ -958,6 +1226,14 @@
         lightbox.classList.add(&#39;show&#39;);
         lightboxPrev.disabled = (index === 0);
         lightboxNext.disabled = (index === galleryItems.length - 1);
+
+        
+        if (index &gt; 0) {
+          preloadImage(galleryItems[index - 1].photoSrc).catch(() =&gt; {});
+        }
+        if (index &lt; galleryItems.length - 1) {
+          preloadImage(galleryItems[index + 1].photoSrc).catch(() =&gt; {});
+        }
       };
 
       items.forEach((item, index) =&gt; {
@@ -969,7 +1245,8 @@
           } else {
             const imgElement = item.tagName === &#39;IMG&#39; ? item : item.querySelector(&#39;img&#39;);
             if (imgElement) {
-              photoSrc = imgElement.src;
+              
+              photoSrc = imgElement.dataset.lazy || imgElement.src;
             }
           }
           const sourceIndex = galleryItems.findIndex(i =&gt; i.photoSrc === photoSrc);
@@ -1002,11 +1279,38 @@
       const closeLightbox = () =&gt; {
         lightbox.classList.remove(&#39;show&#39;);
         lightboxVideo.pause();
+        
+        lightboxVideo.currentTime = 0;
+        lightboxImg.style.opacity = &#39;1&#39;;
       };
 
       lightboxClose.addEventListener(&#39;click&#39;, closeLightbox);
       lightboxPrev.addEventListener(&#39;click&#39;, () =&gt; showItem(currentItemIndex - 1));
       lightboxNext.addEventListener(&#39;click&#39;, () =&gt; showItem(currentItemIndex + 1));
+
+      
+      document.addEventListener(&#39;keydown&#39;, (e) =&gt; {
+        if (lightbox.classList.contains(&#39;show&#39;)) {
+          switch(e.key) {
+            case &#39;Escape&#39;:
+              closeLightbox();
+              break;
+            case &#39;ArrowLeft&#39;:
+              if (currentItemIndex &gt; 0) showItem(currentItemIndex - 1);
+              break;
+            case &#39;ArrowRight&#39;:
+              if (currentItemIndex &lt; galleryItems.length - 1) showItem(currentItemIndex + 1);
+              break;
+          }
+        }
+      });
+
+      
+      lightbox.addEventListener(&#39;click&#39;, (e) =&gt; {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
 
       
       if (items.length &lt;= 1) {
