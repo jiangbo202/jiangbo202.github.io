@@ -1388,5 +1388,12 @@
  &lt;!-- - **LinkedIn**: [YourLinkedInProfile](https://www.linkedin.com/in/YourLinkedInProfile/) --&gt;
 &lt;p&gt;希望你在这里能找到有价值的内容！&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>随想录</title>
+      <link>https://jiangbo202.github.io/thoughts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jiangbo202.github.io/thoughts/</guid>
+      <description>记录生活中的小想法和瞬间思考</description>
+    </item>
   </channel>
 </rss>
