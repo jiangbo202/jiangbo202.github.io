@@ -254,4 +254,142 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+    
+    // 图片放大功能
+    class ImageModal {
+        constructor() {
+            this.modal = document.getElementById('image-modal');
+            this.modalImage = document.getElementById('modal-image');
+            this.closeBtn = document.querySelector('.image-modal-close');
+            this.prevBtn = document.getElementById('prev-image');
+            this.nextBtn = document.getElementById('next-image');
+            this.currentImageSpan = document.getElementById('current-image');
+            this.totalImagesSpan = document.getElementById('total-images');
+            
+            this.currentImages = [];
+            this.currentIndex = 0;
+            
+            this.init();
+        }
+        
+        init() {
+            this.setupEventListeners();
+            this.bindImageThumbnails();
+        }
+        
+        setupEventListeners() {
+            // 关闭模态框
+            this.closeBtn.addEventListener('click', () => this.closeModal());
+            
+            // 点击模态框背景关闭
+            this.modal.addEventListener('click', (e) => {
+                if (e.target === this.modal) {
+                    this.closeModal();
+                }
+            });
+            
+            // 键盘事件
+            document.addEventListener('keydown', (e) => {
+                if (this.modal.classList.contains('show')) {
+                    switch(e.key) {
+                        case 'Escape':
+                            this.closeModal();
+                            break;
+                        case 'ArrowLeft':
+                            this.showPrevImage();
+                            break;
+                        case 'ArrowRight':
+                            this.showNextImage();
+                            break;
+                    }
+                }
+            });
+            
+            // 导航按钮
+            this.prevBtn.addEventListener('click', () => this.showPrevImage());
+            this.nextBtn.addEventListener('click', () => this.showNextImage());
+        }
+        
+        bindImageThumbnails() {
+            // 为所有图片缩略图绑定点击事件
+            document.querySelectorAll('.image-thumbnail').forEach(thumbnail => {
+                thumbnail.addEventListener('click', (e) => {
+                    const clickedSrc = thumbnail.dataset.src;
+                    
+                    // 获取同一个随想条目中的所有图片
+                    const thoughtEntry = thumbnail.closest('.thought-entry');
+                    const allThumbnails = thoughtEntry.querySelectorAll('.image-thumbnail');
+                    
+                    this.currentImages = Array.from(allThumbnails).map(thumb => thumb.dataset.src);
+                    this.currentIndex = this.currentImages.indexOf(clickedSrc);
+                    
+                    this.showModal();
+                });
+            });
+        }
+        
+        showModal() {
+            this.modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+            this.updateImage();
+        }
+        
+        closeModal() {
+            this.modal.classList.remove('show');
+            document.body.style.overflow = ''; // 恢复滚动
+        }
+        
+        updateImage() {
+            if (this.currentImages.length === 0) return;
+            
+            this.modalImage.src = this.currentImages[this.currentIndex];
+            this.currentImageSpan.textContent = this.currentIndex + 1;
+            this.totalImagesSpan.textContent = this.currentImages.length;
+            
+            // 更新导航按钮状态
+            this.prevBtn.disabled = this.currentIndex === 0;
+            this.nextBtn.disabled = this.currentIndex === this.currentImages.length - 1;
+            
+            // 如果只有一张图片，隐藏导航按钮
+            if (this.currentImages.length === 1) {
+                this.prevBtn.style.display = 'none';
+                this.nextBtn.style.display = 'none';
+            } else {
+                this.prevBtn.style.display = 'block';
+                this.nextBtn.style.display = 'block';
+            }
+        }
+        
+        showPrevImage() {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+                this.updateImage();
+            }
+        }
+        
+        showNextImage() {
+            if (this.currentIndex < this.currentImages.length - 1) {
+                this.currentIndex++;
+                this.updateImage();
+            }
+        }
+        
+        // 重新绑定图片事件（用于分页后的新内容）
+        rebindImages() {
+            this.bindImageThumbnails();
+        }
+    }
+    
+    // 初始化图片模态框
+    const imageModal = new ImageModal();
+    
+    // 在分页更新后重新绑定图片事件
+    const originalUpdateDisplay = pagination.updateDisplay;
+    pagination.updateDisplay = function() {
+        originalUpdateDisplay.call(this);
+        // 重新绑定图片事件
+        setTimeout(() => {
+            imageModal.rebindImages();
+        }, 100);
+    };
 });
