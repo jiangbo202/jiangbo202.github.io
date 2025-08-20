@@ -1,8 +1,8 @@
 /* 随想录页面样式 */
 .thoughts-container {
-    max-width: 1200px;
+    max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--gap);
 }
 
 .thoughts-header {
@@ -13,14 +13,16 @@
 }
 
 .thoughts-header h1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: var(--primary);
+    font-size: 40px;
 }
 
 .thoughts-description {
     color: var(--secondary);
     font-style: italic;
     margin: 0;
+    font-size: 16px;
 }
 
 .timeline {
@@ -31,7 +33,7 @@
 .timeline::before {
     content: '';
     position: absolute;
-    left: 40px;
+    left: 35px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -41,7 +43,7 @@
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
-    padding-left: 100px;
+    padding-left: 90px;
     opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
 }
@@ -55,7 +57,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 80px;
+    width: 70px;
 }
 
 .timeline-date-badge {
@@ -75,7 +77,7 @@
 .timeline-date-badge::after {
     content: '';
     position: absolute;
-    right: -21px;
+    right: -16px;
     top: 50%;
     transform: translateY(-50%);
     width: 8px;
@@ -112,23 +114,23 @@
 
 .thought-time {
     color: var(--secondary);
-    font-size: 13px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
     font-family: monospace;
 }
 
 .thought-text {
     color: var(--primary);
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 18px;
     max-width: none;
 }
 
 .thought-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
 
 .tag {
@@ -136,7 +138,7 @@
     color: var(--primary);
     padding: 4px 8px;
     border-radius: 12px;
-    font-size: 12px;
+    font-size: 13px;
     border: 1px solid var(--border);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -154,10 +156,6 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .thoughts-container {
-        padding: 10px;
-    }
-    
     .timeline-item {
         padding-left: 60px;
     }
@@ -179,6 +177,22 @@
         right: -8px;
         width: 6px;
         height: 6px;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    .thought-text {
+        font-size: 16px;
+    }
+    
+    .thoughts-header h1 {
+        font-size: 32px;
+    }
+    
+    .thoughts-description {
+        font-size: 14px;
     }
 }
 
