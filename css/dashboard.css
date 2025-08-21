@@ -1,0 +1,972 @@
+/* 事项管理页面样式 */
+.dashboard-container {
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+}
+
+.dashboard-header h1 {
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-size: 40px;
+}
+
+.dashboard-description {
+    color: var(--secondary);
+    font-style: italic;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* 当前任务区域 */
+.current-tasks-section {
+    margin-bottom: 50px;
+}
+
+.current-tasks-section h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 28px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.current-tasks-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.task-circle-card {
+    background: var(--entry);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 200px;
+}
+
+.task-circle-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.task-circle-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.task-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(var(--progress-color, #e5e7eb) 0deg, var(--progress-color, #e5e7eb) var(--progress-deg, 0deg), var(--code-bg) var(--progress-deg, 0deg));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.task-circle::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: var(--entry);
+}
+
+.task-circle-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.task-percentage {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.task-category-name {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.task-info {
+    text-align: center;
+}
+
+.task-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.task-details {
+    font-size: 13px;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.task-notes {
+    font-size: 12px;
+    color: var(--secondary);
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.task-meta {
+    font-size: 11px;
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
+/* 空白任务卡片样式 */
+.empty-task-card {
+    border: 2px dashed var(--border);
+    background: transparent;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.empty-task-card:hover {
+    opacity: 0.8;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.empty-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.empty-circle-inner {
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 24px;
+    color: var(--secondary);
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.empty-text {
+    font-size: 10px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.empty-name {
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.empty-details {
+    color: var(--secondary);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* 计划待办区域 */
+.planned-tasks-section {
+    margin-bottom: 50px;
+}
+
+.planned-tasks-section h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 28px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.planned-tasks-list {
+    space-y: 10px;
+}
+
+.planned-task-item {
+    display: flex;
+    align-items: flex-start;
+    background: var(--entry);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.planned-task-item:hover {
+    transform: translateX(5px);
+    border-color: var(--primary);
+}
+
+.task-number {
+    background: var(--primary);
+    color: var(--theme);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.task-title .task-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary);
+    margin: 0;
+}
+
+.priority-badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.priority-high {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.priority-medium {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.priority-low {
+    background: #f0f9ff;
+    color: #2563eb;
+}
+
+.task-details {
+    font-size: 13px;
+    color: var(--secondary);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* 日历区域 */
+.calendar-section {
+    margin-bottom: 40px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 28px;
+}
+
+.view-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    background: var(--entry);
+    color: var(--primary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.view-btn:hover {
+    background: var(--code-bg);
+}
+
+.view-btn.active {
+    background: var(--primary);
+    color: var(--theme);
+    border-color: var(--primary);
+}
+
+/* 图例 */
+.legend {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--primary);
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+/* 日历视图 */
+.calendar-view {
+    display: none;
+}
+
+.calendar-view.active {
+    display: block;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-btn:hover {
+    background: var(--primary);
+    color: var(--theme);
+}
+
+.calendar-nav h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.calendar-grid {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--entry);
+}
+
+.calendar-header-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid var(--border);
+}
+
+.calendar-cell {
+    padding: 12px 8px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    min-height: 50px;
+    position: relative;
+}
+
+.calendar-cell:last-child {
+    border-right: none;
+}
+
+.calendar-cell.header {
+    background: var(--code-bg);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.calendar-body-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid var(--border);
+}
+
+.calendar-body-row:last-child {
+    border-bottom: none;
+}
+
+.calendar-date {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar-date:hover {
+    background: var(--code-bg);
+}
+
+.calendar-date.other-month {
+    color: var(--secondary);
+    opacity: 0.5;
+}
+
+.calendar-date.today {
+    background: rgba(var(--primary), 0.1);
+    font-weight: bold;
+}
+
+.date-number {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.date-progress {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.progress-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-fill-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+
+/* 年度视图 */
+.year-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.year-nav h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.month-cell {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.month-cell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+.month-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.month-progress {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.mini-progress-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mini-progress-circle:hover {
+    transform: scale(1.2);
+}
+
+/* 月份详情工具提示 */
+.month-tooltip {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+    min-width: 200px;
+    display: none;
+    font-size: 13px;
+}
+
+.month-tooltip.show {
+    display: block;
+    animation: tooltipFadeIn 0.2s ease;
+}
+
+.month-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--border);
+}
+
+.tooltip-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tooltip-item:last-child {
+    border-bottom: none;
+}
+
+.tooltip-category {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tooltip-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.tooltip-progress {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* 日期悬浮工具提示 */
+.date-tooltip {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    font-size: 13px;
+    min-width: 200px;
+    max-width: 250px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.2s ease;
+    pointer-events: none;
+
+}
+
+.date-tooltip.show {
+    opacity: 1 !important;
+    transform: scale(1);
+}
+
+.tooltip-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+}
+
+.tooltip-progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tooltip-progress-item:last-child {
+    border-bottom: none;
+}
+
+.tooltip-category {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tooltip-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.tooltip-progress-value {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+/* 模态框 */
+.date-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.date-modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.date-modal-content {
+    background: var(--entry);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.date-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--secondary);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.date-modal-close:hover {
+    color: var(--primary);
+}
+
+.modal-progress {
+    margin-top: 20px;
+}
+
+.modal-progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-progress-item:last-child {
+    border-bottom: none;
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-category {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.progress-value {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+    
+    .dashboard-header h1 {
+        font-size: 32px;
+    }
+    
+    .current-tasks-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .task-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .task-percentage {
+        font-size: 16px;
+    }
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .legend {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .calendar-date {
+        min-height: 70px;
+    }
+    
+    .year-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .month-cell {
+        padding: 15px;
+        min-height: 100px;
+    }
+    
+    .month-name {
+        font-size: 14px;
+    }
+    
+    .mini-progress-circle {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .task-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .date-modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .current-tasks-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-cell {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+    
+    .date-number {
+        font-size: 12px;
+    }
+    
+    .progress-circle {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .task-card {
+        padding: 20px;
+    }
+    
+    .planned-task-item {
+        padding: 15px;
+    }
+    
+    .task-number {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+        margin-right: 15px;
+    }
+}
+
+/* 暗色主题适配 */
+[data-theme="dark"] .task-card {
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .task-card:hover {
+    box-shadow: 0 4px 16px rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .date-tooltip {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .priority-high {
+    background: rgba(220, 38, 38, 0.2);
+    color: #fca5a5;
+}
+
+[data-theme="dark"] .priority-medium {
+    background: rgba(217, 119, 6, 0.2);
+    color: #fcd34d;
+}
+
+[data-theme="dark"] .priority-low {
+    background: rgba(37, 99, 235, 0.2);
+    color: #93c5fd;
+}
+
+/* 亮色主题适配 */
+[data-theme="light"] .task-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="light"] .task-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* 动画效果 */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-100%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-100%) scale(1);
+    }
+}
+
+@keyframes progressRing {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+.task-circle-card,
+.planned-task-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.task-circle-card:nth-child(1) { animation-delay: 0.1s; }
+.task-circle-card:nth-child(2) { animation-delay: 0.2s; }
+.task-circle-card:nth-child(3) { animation-delay: 0.3s; }
+.task-circle-card:nth-child(4) { animation-delay: 0.4s; }
+
+.planned-task-item:nth-child(1) { animation-delay: 0.1s; }
+.planned-task-item:nth-child(2) { animation-delay: 0.2s; }
+.planned-task-item:nth-child(3) { animation-delay: 0.3s; }
+.planned-task-item:nth-child(4) { animation-delay: 0.4s; }
