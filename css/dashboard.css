@@ -52,7 +52,10 @@
     border: 1px solid var(--border);
     transition: all 0.3s ease;
     text-align: center;
-    min-height: 200px;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .task-circle-card:hover {
@@ -108,19 +111,32 @@
 
 .task-info {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-height: 120px;
 }
 
 .task-name {
     font-size: 16px;
     font-weight: 600;
     color: var(--primary);
-    margin-bottom: 8px;
     line-height: 1.3;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
 }
 
 .task-details {
     font-size: 13px;
     color: var(--secondary);
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 8px;
 }
 
@@ -128,8 +144,26 @@
     font-size: 12px;
     color: var(--secondary);
     font-style: italic;
-    margin-bottom: 8px;
     line-height: 1.3;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    flex: 1;
+}
+
+.task-start-date {
+    margin-top: auto;
+}
+
+.start-date-label {
+    font-size: 10px;
+    color: var(--secondary);
+    opacity: 0.6;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .task-meta {
@@ -529,12 +563,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    user-select: none;
 }
 
 .month-cell:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     border-color: var(--primary);
+    background: var(--code-bg);
+}
+
+.month-cell:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.month-cell.current-month {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, var(--entry) 0%, var(--code-bg) 100%);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.month-cell.current-month .month-name {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.month-cell.current-month::before {
+    content: '●';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--primary);
+    font-size: 8px;
+    opacity: 0.8;
 }
 
 .month-name {
@@ -542,6 +604,21 @@
     font-weight: 600;
     color: var(--primary);
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.month-click-hint {
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translateY(-1px);
+}
+
+.month-cell:hover .month-click-hint {
+    opacity: 0.7;
 }
 
 .month-progress {
@@ -576,14 +653,19 @@
     padding: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     z-index: 100;
-    min-width: 200px;
-    display: none;
+    min-width: 250px;
+    max-width: 300px;
+    display: block;
     font-size: 13px;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100%) scale(0.9);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
 }
 
 .month-tooltip.show {
-    display: block;
-    animation: tooltipFadeIn 0.2s ease;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-100%) scale(1);
 }
 
 .month-tooltip::after {
@@ -599,9 +681,10 @@
 .tooltip-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 4px 0;
+    align-items: flex-start;
+    padding: 8px 0;
     border-bottom: 1px solid var(--border);
+    gap: 12px;
 }
 
 .tooltip-item:last-child {
@@ -612,6 +695,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    flex-shrink: 0;
 }
 
 .tooltip-color {
@@ -623,6 +707,26 @@
 .tooltip-progress {
     font-weight: 600;
     color: var(--primary);
+}
+
+.tooltip-progress-detail {
+    text-align: right;
+    line-height: 1.3;
+}
+
+.tooltip-progress-detail > div {
+    margin-bottom: 2px;
+}
+
+.tooltip-progress-detail > div:last-child {
+    margin-bottom: 0;
+}
+
+.tooltip-no-data {
+    color: var(--secondary);
+    font-style: italic;
+    text-align: center;
+    padding: 8px 0;
 }
 
 /* 日期悬浮工具提示 */
@@ -767,6 +871,175 @@
     color: var(--primary);
 }
 
+/* 历史记录区域 */
+.history-section {
+    margin-bottom: 40px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.history-header h2 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 28px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.history-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--primary);
+    font-size: 14px;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.category-filter {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--primary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.category-filter:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.history-list {
+    margin-bottom: 25px;
+}
+
+.history-item {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.history-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.history-item.hidden {
+    display: none;
+}
+
+.history-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 15px;
+}
+
+.history-item-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.history-category-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.history-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.3;
+}
+
+.history-duration {
+    font-size: 13px;
+    color: var(--secondary);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.history-item-content {
+    margin-left: 0;
+}
+
+.history-notes {
+    margin: 0;
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.5;
+}
+
+.history-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+}
+
+.pagination-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--primary);
+    color: var(--theme);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: var(--secondary);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .dashboard-container {
@@ -834,6 +1107,35 @@
     .date-modal-content {
         width: 95%;
         padding: 20px;
+    }
+    
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .history-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .search-input {
+        min-width: 150px;
+        flex: 1;
+    }
+    
+    .history-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .history-duration {
+        align-self: flex-end;
+    }
+    
+    .pagination-info {
+        font-size: 12px;
     }
 }
 

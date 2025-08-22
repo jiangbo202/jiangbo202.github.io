@@ -17,6 +17,7 @@ class DashboardManager {
         this.initProgressCircles();
         this.renderMonthCalendar();
         this.setupModal();
+        this.initHistoryFeatures();
     }
     
     initProgressCircles() {
@@ -391,6 +392,14 @@ class DashboardManager {
         document.getElementById('current-year').textContent = `${year}年`;
         
         const yearGrid = document.getElementById('year-grid');
+        
+        // 清理所有可能存在的工具提示
+        document.querySelectorAll('.month-tooltip').forEach(tooltip => {
+            if (tooltip.parentNode) {
+                tooltip.parentNode.removeChild(tooltip);
+            }
+        });
+        
         yearGrid.innerHTML = '';
         
         const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', 
@@ -400,9 +409,15 @@ class DashboardManager {
             const monthCell = document.createElement('div');
             monthCell.className = 'month-cell';
             
+            // 高亮当前月份
+            const today = new Date();
+            if (year === today.getFullYear() && month === today.getMonth()) {
+                monthCell.classList.add('current-month');
+            }
+            
             const monthName = document.createElement('div');
             monthName.className = 'month-name';
-            monthName.textContent = monthNames[month];
+            monthName.innerHTML = `${monthNames[month]} <span class="month-click-hint">→</span>`;
             
             const monthProgress = document.createElement('div');
             monthProgress.className = 'month-progress';
@@ -411,21 +426,27 @@ class DashboardManager {
             const monthStats = this.calculateMonthStats(year, month);
             
             Object.entries(this.categories).forEach(([key, category]) => {
-                const monthData = monthStats[key] || { completed: 0, total: 0 };
-                const completionRate = monthData.total > 0 ? monthData.completed / monthData.total : 0;
+                const monthData = monthStats[key] || { completed: 0, total: 0, daysWithProgress: 0 };
                 
-                const miniCircle = document.createElement('div');
-                miniCircle.className = 'mini-progress-circle';
-                miniCircle.style.backgroundColor = category.color;
-                miniCircle.style.opacity = Math.max(0.3, completionRate); // 最小透明度30%
-                
-                // 添加数据属性用于工具提示
-                miniCircle.setAttribute('data-category', key);
-                miniCircle.setAttribute('data-completed', monthData.completed);
-                miniCircle.setAttribute('data-total', monthData.total);
-                miniCircle.setAttribute('data-rate', Math.round(completionRate * 100));
-                
-                monthProgress.appendChild(miniCircle);
+                // 只有当该月有进度数据时才显示圆圈
+                if (monthData.daysWithProgress > 0) {
+                    const completionRate = monthData.total > 0 ? monthData.completed / monthData.total : 0;
+                    
+                    const miniCircle = document.createElement('div');
+                    miniCircle.className = 'mini-progress-circle';
+                    miniCircle.style.backgroundColor = category.color;
+                    miniCircle.style.opacity = Math.max(0.4, completionRate); // 最小透明度40%
+                    
+                    // 添加数据属性用于工具提示
+                    miniCircle.setAttribute('data-category', key);
+                    miniCircle.setAttribute('data-completed', monthData.completed);
+                    miniCircle.setAttribute('data-total', monthData.total);
+                    miniCircle.setAttribute('data-rate', Math.round(completionRate * 100));
+                    miniCircle.setAttribute('data-days-with-progress', monthData.daysWithProgress);
+                    miniCircle.setAttribute('data-total-progress', monthData.totalProgress);
+                    
+                    monthProgress.appendChild(miniCircle);
+                }
             });
             
             monthCell.appendChild(monthName);
@@ -433,6 +454,9 @@ class DashboardManager {
             
             // 添加悬浮事件
             this.addMonthHoverEvents(monthCell, monthStats);
+            
+            // 添加点击事件 - 跳转到对应月份视图
+            this.addMonthClickEvent(monthCell, year, month);
             
             yearGrid.appendChild(monthCell);
         }
@@ -443,7 +467,12 @@ class DashboardManager {
         const daysInMonth = new Date(year, month + 1, 0).getDate();
         
         Object.keys(this.categories).forEach(key => {
-            stats[key] = { completed: 0, total: daysInMonth };
+            stats[key] = { 
+                completed: 0, 
+                total: daysInMonth, 
+                totalProgress: 0,  // 总进度量
+                daysWithProgress: 0  // 有进度的天数
+            };
         });
         
         // 遍历该月的所有日期
@@ -456,8 +485,14 @@ class DashboardManager {
                 Object.keys(this.categories).forEach(key => {
                     const category = this.categories[key];
                     const progress = dayProgress[key] || 0;
-                    if (progress >= category.daily_target) {
-                        stats[key].completed++;
+                    
+                    if (progress > 0) {
+                        stats[key].totalProgress += progress;
+                        stats[key].daysWithProgress++;
+                        
+                        if (progress >= category.daily_target) {
+                            stats[key].completed++;
+                        }
                     }
                 });
             }
@@ -468,40 +503,97 @@ class DashboardManager {
     
     addMonthHoverEvents(monthCell, monthStats) {
         let tooltip = null;
+        let removeTimeout = null;
         
         monthCell.addEventListener('mouseenter', (e) => {
+            // 清除之前的移除定时器
+            if (removeTimeout) {
+                clearTimeout(removeTimeout);
+                removeTimeout = null;
+            }
+            
+            // 如果已有工具提示，先移除
+            if (tooltip && tooltip.parentNode) {
+                tooltip.parentNode.removeChild(tooltip);
+                tooltip = null;
+            }
+            
             // 创建工具提示
             tooltip = document.createElement('div');
             tooltip.className = 'month-tooltip';
             
-            Object.entries(this.categories).forEach(([key, category]) => {
-                const monthData = monthStats[key] || { completed: 0, total: 0 };
-                const completionRate = monthData.total > 0 ? Math.round((monthData.completed / monthData.total) * 100) : 0;
-                
-                const tooltipItem = document.createElement('div');
-                tooltipItem.className = 'tooltip-item';
-                
-                const categoryDiv = document.createElement('div');
-                categoryDiv.className = 'tooltip-category';
-                
-                const colorDiv = document.createElement('div');
-                colorDiv.className = 'tooltip-color';
-                colorDiv.style.backgroundColor = category.color;
-                
-                const nameSpan = document.createElement('span');
-                nameSpan.textContent = category.name;
-                
-                categoryDiv.appendChild(colorDiv);
-                categoryDiv.appendChild(nameSpan);
-                
-                const progressDiv = document.createElement('div');
-                progressDiv.className = 'tooltip-progress';
-                progressDiv.textContent = `${monthData.completed}/${monthData.total}天 (${completionRate}%)`;
-                
-                tooltipItem.appendChild(categoryDiv);
-                tooltipItem.appendChild(progressDiv);
-                tooltip.appendChild(tooltipItem);
-            });
+            // 添加月份标题
+            const monthName = monthCell.querySelector('.month-name').textContent;
+            const tooltipTitle = document.createElement('div');
+            tooltipTitle.className = 'tooltip-title';
+            tooltipTitle.textContent = `${monthName}汇总`;
+            tooltip.appendChild(tooltipTitle);
+            
+            // 只显示有进度的类别
+            const hasAnyProgress = Object.values(monthStats).some(data => data.daysWithProgress > 0);
+            
+            if (!hasAnyProgress) {
+                const noDataDiv = document.createElement('div');
+                noDataDiv.className = 'tooltip-no-data';
+                noDataDiv.textContent = '本月暂无进度数据';
+                noDataDiv.style.textAlign = 'center';
+                noDataDiv.style.color = 'var(--secondary)';
+                noDataDiv.style.fontStyle = 'italic';
+                noDataDiv.style.padding = '8px 0';
+                tooltip.appendChild(noDataDiv);
+            } else {
+                Object.entries(this.categories).forEach(([key, category]) => {
+                    const monthData = monthStats[key] || { completed: 0, total: 0, daysWithProgress: 0, totalProgress: 0 };
+                    
+                    // 只显示有进度的类别
+                    if (monthData.daysWithProgress > 0) {
+                        const completionRate = monthData.total > 0 ? Math.round((monthData.completed / monthData.total) * 100) : 0;
+                        const avgProgress = monthData.daysWithProgress > 0 ? Math.round(monthData.totalProgress / monthData.daysWithProgress) : 0;
+                        
+                        const tooltipItem = document.createElement('div');
+                        tooltipItem.className = 'tooltip-item';
+                        
+                        const categoryDiv = document.createElement('div');
+                        categoryDiv.className = 'tooltip-category';
+                        
+                        const colorDiv = document.createElement('div');
+                        colorDiv.className = 'tooltip-color';
+                        colorDiv.style.backgroundColor = category.color;
+                        
+                        const nameSpan = document.createElement('span');
+                        nameSpan.textContent = category.name;
+                        
+                        categoryDiv.appendChild(colorDiv);
+                        categoryDiv.appendChild(nameSpan);
+                        
+                        const progressDiv = document.createElement('div');
+                        progressDiv.className = 'tooltip-progress-detail';
+                        
+                        // 创建详细信息
+                        const completedInfo = document.createElement('div');
+                        completedInfo.textContent = `完成: ${monthData.completed}/${monthData.total}天 (${completionRate}%)`;
+                        completedInfo.style.fontSize = '12px';
+                        
+                        const totalInfo = document.createElement('div');
+                        totalInfo.textContent = `总量: ${monthData.totalProgress}${category.unit} (${monthData.daysWithProgress}天有记录)`;
+                        totalInfo.style.fontSize = '11px';
+                        totalInfo.style.color = 'var(--secondary)';
+                        
+                        const avgInfo = document.createElement('div');
+                        avgInfo.textContent = `日均: ${avgProgress}${category.unit}`;
+                        avgInfo.style.fontSize = '11px';
+                        avgInfo.style.color = 'var(--secondary)';
+                        
+                        progressDiv.appendChild(completedInfo);
+                        progressDiv.appendChild(totalInfo);
+                        progressDiv.appendChild(avgInfo);
+                        
+                        tooltipItem.appendChild(categoryDiv);
+                        tooltipItem.appendChild(progressDiv);
+                        tooltip.appendChild(tooltipItem);
+                    }
+                });
+            }
             
             monthCell.appendChild(tooltip);
             
@@ -514,12 +606,41 @@ class DashboardManager {
         monthCell.addEventListener('mouseleave', () => {
             if (tooltip) {
                 tooltip.classList.remove('show');
-                setTimeout(() => {
-                    if (tooltip && tooltip.parentNode) {
-                        tooltip.parentNode.removeChild(tooltip);
+                const tooltipToRemove = tooltip; // 保存引用
+                tooltip = null; // 立即重置变量
+                
+                // 使用removeTimeout来跟踪移除操作
+                removeTimeout = setTimeout(() => {
+                    if (tooltipToRemove && tooltipToRemove.parentNode) {
+                        tooltipToRemove.parentNode.removeChild(tooltipToRemove);
                     }
+                    removeTimeout = null;
                 }, 200);
             }
+        });
+    }
+    
+    addMonthClickEvent(monthCell, year, month) {
+        monthCell.addEventListener('click', (e) => {
+            // 防止点击时触发其他事件
+            e.stopPropagation();
+            
+            // 添加点击反馈效果
+            monthCell.style.transform = 'scale(0.95)';
+            monthCell.style.opacity = '0.8';
+            
+            // 设置当前日期为指定的年月
+            this.currentDate = new Date(year, month, 1);
+            
+            // 延迟切换以显示点击效果
+            setTimeout(() => {
+                // 切换到月度视图
+                this.switchView('month');
+                
+                // 恢复样式
+                monthCell.style.transform = '';
+                monthCell.style.opacity = '';
+            }, 150);
         });
     }
     
@@ -578,6 +699,146 @@ class DashboardManager {
         modal.classList.add('show');
     }
     
+    initHistoryFeatures() {
+        this.currentPage = 1;
+        this.itemsPerPage = 5;
+        this.allHistoryItems = Array.from(document.querySelectorAll('.history-item'));
+        this.filteredItems = [...this.allHistoryItems];
+        
+        this.bindHistoryEvents();
+        this.updateHistoryDisplay();
+    }
+    
+    bindHistoryEvents() {
+        // 搜索功能
+        const searchInput = document.getElementById('history-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.filterHistory();
+            });
+        }
+        
+        // 类别筛选
+        const categoryFilter = document.getElementById('category-filter');
+        if (categoryFilter) {
+            categoryFilter.addEventListener('change', (e) => {
+                this.filterHistory();
+            });
+        }
+        
+        // 分页按钮
+        const prevBtn = document.getElementById('prev-page');
+        const nextBtn = document.getElementById('next-page');
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (this.currentPage > 1) {
+                    this.currentPage--;
+                    this.updateHistoryDisplay();
+                }
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const totalPages = Math.ceil(this.filteredItems.length / this.itemsPerPage);
+                if (this.currentPage < totalPages) {
+                    this.currentPage++;
+                    this.updateHistoryDisplay();
+                }
+            });
+        }
+    }
+    
+    filterHistory() {
+        const searchTerm = document.getElementById('history-search')?.value.toLowerCase() || '';
+        const selectedCategory = document.getElementById('category-filter')?.value || '';
+        
+        this.filteredItems = this.allHistoryItems.filter(item => {
+            const searchData = item.getAttribute('data-search').toLowerCase();
+            const itemCategory = item.getAttribute('data-category');
+            
+            const matchesSearch = searchData.includes(searchTerm);
+            const matchesCategory = !selectedCategory || itemCategory === selectedCategory;
+            
+            return matchesSearch && matchesCategory;
+        });
+        
+        this.currentPage = 1; // 重置到第一页
+        this.updateHistoryDisplay();
+    }
+    
+    updateHistoryDisplay() {
+        // 隐藏所有项目
+        this.allHistoryItems.forEach(item => {
+            item.classList.add('hidden');
+        });
+        
+        // 计算分页
+        const totalPages = Math.ceil(this.filteredItems.length / this.itemsPerPage);
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        
+        // 显示当前页的项目
+        const currentPageItems = this.filteredItems.slice(startIndex, endIndex);
+        currentPageItems.forEach(item => {
+            item.classList.remove('hidden');
+        });
+        
+        // 更新分页信息
+        this.updatePaginationInfo(totalPages);
+    }
+    
+    updatePaginationInfo(totalPages) {
+        const currentPageSpan = document.getElementById('current-page');
+        const totalPagesSpan = document.getElementById('total-pages');
+        const prevBtn = document.getElementById('prev-page');
+        const nextBtn = document.getElementById('next-page');
+        
+        if (currentPageSpan) currentPageSpan.textContent = this.currentPage;
+        if (totalPagesSpan) totalPagesSpan.textContent = totalPages;
+        
+        if (prevBtn) {
+            prevBtn.disabled = this.currentPage <= 1;
+        }
+        
+        if (nextBtn) {
+            nextBtn.disabled = this.currentPage >= totalPages;
+        }
+        
+        // 如果没有结果，显示提示
+        if (this.filteredItems.length === 0) {
+            this.showNoResultsMessage();
+        } else {
+            this.hideNoResultsMessage();
+        }
+    }
+    
+    showNoResultsMessage() {
+        let noResultsDiv = document.getElementById('no-results-message');
+        if (!noResultsDiv) {
+            noResultsDiv = document.createElement('div');
+            noResultsDiv.id = 'no-results-message';
+            noResultsDiv.className = 'no-results-message';
+            noResultsDiv.innerHTML = `
+                <div style="text-align: center; padding: 40px; color: var(--secondary);">
+                    <div style="font-size: 48px; margin-bottom: 16px;">🔍</div>
+                    <div style="font-size: 16px; margin-bottom: 8px;">没有找到匹配的记录</div>
+                    <div style="font-size: 14px;">请尝试调整搜索条件</div>
+                </div>
+            `;
+            document.getElementById('history-list').appendChild(noResultsDiv);
+        }
+        noResultsDiv.style.display = 'block';
+    }
+    
+    hideNoResultsMessage() {
+        const noResultsDiv = document.getElementById('no-results-message');
+        if (noResultsDiv) {
+            noResultsDiv.style.display = 'none';
+        }
+    }
+
     // 工具函数
     isSameDate(date1, date2) {
         return date1.getFullYear() === date2.getFullYear() &&

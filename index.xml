@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://jiangbo202.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DOING</title>
+      <link>https://jiangbo202.github.io/dashboard/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0800</pubDate>
+      <guid>https://jiangbo202.github.io/dashboard/</guid>
+      <description>记录当前正在做的事，每天/近期做的事，以及完成程度</description>
+    </item>
     <item>
       <title>香港之行[202404]</title>
       <link>https://jiangbo202.github.io/posts/trip-to-hongkong202404/</link>
